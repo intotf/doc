@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+ $.ajax({
+            type: 'post',
+            url: "http://106.57.***.***:8003/Studio/getAuditCount",
+            headers:{"Cookie":"UserToken=2c12b32740cb48f5bff19251687271c5"},
+            dataType: 'jsonp',
+            success: function (da) {
+                $("#auditCount").html(da.Data);
+            }
+        });
+</script>
+</head>
+<body>
+<div id="auditCount"><h2>Ajax 跨域测试</h2></div>
+</body>
+</html>
